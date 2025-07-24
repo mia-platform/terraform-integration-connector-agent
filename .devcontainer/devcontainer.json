@@ -1,0 +1,30 @@
+{
+	"name": "Terraform",
+	"image": "mcr.microsoft.com/vscode/devcontainers/base:debian",
+	"features": {
+		"ghcr.io/devcontainers/features/terraform:1": {
+			"installTerraformDocs": true,
+			"installTFsec": true
+		}
+	},
+	"customizations": {
+		"vscode": {
+			"settings": {
+				"files.insertFinalNewline": false,
+				"files.trimFinalNewlines": true,
+				"files.trimTrailingWhitespace": false
+			},
+			"extensions": [
+				"editorconfig.editorconfig",
+				"davidanson.vscode-markdownlint",
+				"timonwong.shellcheck"
+			]
+		},
+		"codespaces": {
+			"openFiles": [
+				"README.md",
+				"CONTRIBUTING.md"
+			]
+		}
+	}
+}

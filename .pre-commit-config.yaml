@@ -1,0 +1,30 @@
+repos:
+- repo: https://github.com/antonbabenko/pre-commit-terraform
+  rev: v1.99.5 # Get the latest from: https://github.com/antonbabenko/pre-commit-terraform/releases
+  hooks:
+  - id: terraform_fmt
+  - id: terraform_docs
+    args: [--args=--lockfile=false]
+  - id: terraform_validate
+- repo: https://github.com/pre-commit/pre-commit-hooks
+  rev: v5.0.0
+  hooks:
+  - id: check-case-conflict
+    name: Check filename case conflicts
+  - id: check-merge-conflict
+    args: [--assume-in-merge]
+    name: Check that no merge conflict marker exists
+  - id: check-executables-have-shebangs
+    name: Check that executable files have shebangs
+  - id: check-shebang-scripts-are-executable
+    name: Check that files with shebangs are executable
+  - id: end-of-file-fixer
+    name: Makes sure files end in a newline and only a newline
+  - id: trailing-whitespace
+    name: Trims trailing whitespace
+    args: [--markdown-linebreak-ext=md] # add exception for markdown linebreaks
+- repo: https://github.com/gitleaks/gitleaks
+  rev: v8.28.0
+  hooks:
+  - id: gitleaks
+    name: Protect and discover secrets using Gitleaks
