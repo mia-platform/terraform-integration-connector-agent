@@ -1,7 +1,7 @@
 # ICA Terraform Modules
 
 These modules are meant to be an easy setup of the infrastructure needed in AWS, Microsoft Azure and GCP for exporting
-resource events to allow ingestion in the Mia-Platform Data Catalog via the Integration Connector Agent.
+resource events to allow ingestion in the Mia-Platform Data Catalog via the [Integration Connector Agent](https://github.com/mia-platform/integration-connector-agent).
 
 ## Usage
 
