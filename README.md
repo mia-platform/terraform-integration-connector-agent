@@ -23,7 +23,7 @@ module "aws" {
 
 ```hcl
 module "gcp" {
-	source = "github.com/mia-platform/terraform-integration-connector-agent//modules/google
+	source = "github.com/mia-platform/terraform-integration-connector-agent//modules/google"
 
 	pubsub_topic_name = "awesome-topic-name"
 	cloud_asset_feed_id = "awesome-feed-id"
@@ -34,7 +34,7 @@ module "gcp" {
 
 ```hcl
 module "azure" {
-	source = "github.com/mia-platform/terraform-integration-connector-agent//modules/azurerm
+	source = "github.com/mia-platform/terraform-integration-connector-agent//modules/azurerm"
 
 	resource_group = "awesome-resource-group"
 	activity_log_diagnostic_setting_name = "awesome-diagnostic-setting-name"
