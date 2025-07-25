@@ -1,0 +1,39 @@
+version: 2
+
+updates:
+# keep up to date the github actions
+- package-ecosystem: github-actions
+  directory: /
+  schedule:
+    interval: monthly
+    timezone: Europe/Rome
+  groups:
+    minor-actions-dependencies:
+      update-types:
+      - minor
+      - patch
+  commit-message:
+    include: scope
+    prefix: ci
+
+# keep up to date devcontainers
+- package-ecosystem: devcontainers
+  directory: "/"
+  schedule:
+    interval: monthly
+    timezone: Europe/Rome
+  commit-message:
+    include: scope
+    prefix: build
+
+# keep up to date the terraform providers
+- package-ecosystem: terraform
+  directories:
+  - examples/*
+  - modules/*
+  schedule:
+    interval: monthly
+    timezone: Europe/Rome
+  commit-message:
+    include: scope
+    prefix: feat
