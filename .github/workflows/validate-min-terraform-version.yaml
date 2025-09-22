@@ -17,12 +17,12 @@ jobs:
       directories: ${{ steps.dirs.outputs.directories }}
     steps:
     - name: Checkout repository
-      uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
       with:
         show-progress: false
     - name: Get directories
       id: dirs
-      uses: clowdhaus/terraform-composite-actions/directories@8aef6513928e6e56c30662afb34a21bf4bf5d9f4 # v 1.11.1
+      uses: clowdhaus/terraform-composite-actions/directories@26118b78561fb44052ce9ab6c5ab850df70b9aa0 # v 1.13.0
 
   validate:
     name: Validate Terraform
@@ -35,7 +35,7 @@ jobs:
         directory: ${{ fromJson(needs.folders.outputs.directories) }}
     steps:
     - name: Checkout repository
-      uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
       with:
         show-progress: false
     - name: Get minimum Terrafrom version
@@ -44,7 +44,7 @@ jobs:
       with:
         directory: ${{ matrix.directory }}
     - name: Validate with Terraform ${{ steps.tfversion.outputs.minVersion }}
-      uses: clowdhaus/terraform-composite-actions/pre-commit@8aef6513928e6e56c30662afb34a21bf4bf5d9f4 # v 1.11.1
+      uses: clowdhaus/terraform-composite-actions/pre-commit@26118b78561fb44052ce9ab6c5ab850df70b9aa0 # v 1.13.0
       with:
         terraform-version: ${{ steps.tfversion.outputs.minVersion }}
         args: 'terraform_validate --color=always --show-diff-on-failure --files ${{ matrix.directory }}/*'
