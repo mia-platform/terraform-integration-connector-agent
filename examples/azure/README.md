@@ -21,14 +21,14 @@ Run `terraform destroy` when you don't need these resources.
 | Name | Version |
 |------|---------|
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.0 |
-| <a name="requirement_azuread"></a> [azuread](#requirement\_azuread) | 3.4.0 |
+| <a name="requirement_azuread"></a> [azuread](#requirement\_azuread) | 3.6.0 |
 | <a name="requirement_azurerm"></a> [azurerm](#requirement\_azurerm) | 4.46.0 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| <a name="provider_azuread"></a> [azuread](#provider\_azuread) | 3.4.0 |
+| <a name="provider_azuread"></a> [azuread](#provider\_azuread) | 3.6.0 |
 | <a name="provider_azurerm"></a> [azurerm](#provider\_azurerm) | 4.46.0 |
 
 ## Modules
@@ -41,8 +41,8 @@ Run `terraform destroy` when you don't need these resources.
 
 | Name | Type |
 |------|------|
-| [azuread_application_registration.activity_log](https://registry.terraform.io/providers/hashicorp/azuread/3.4.0/docs/resources/application_registration) | resource |
-| [azuread_service_principal.activity_log](https://registry.terraform.io/providers/hashicorp/azuread/3.4.0/docs/resources/service_principal) | resource |
+| [azuread_application_registration.activity_log](https://registry.terraform.io/providers/hashicorp/azuread/3.6.0/docs/resources/application_registration) | resource |
+| [azuread_service_principal.activity_log](https://registry.terraform.io/providers/hashicorp/azuread/3.6.0/docs/resources/service_principal) | resource |
 | [azurerm_resource_group.example](https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/resource_group) | resource |
 | [azurerm_role_assignment.activity_log_checkpoint_storage](https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/role_assignment) | resource |
 | [azurerm_role_assignment.activity_log_eventhub_reader](https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/role_assignment) | resource |
